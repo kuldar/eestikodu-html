@@ -1,0 +1,18 @@
+///////////////
+//  Helpers  //
+///////////////
+
+@mixin min-width($breaking-point) {
+  @media only screen and (min-width: $breaking-point) {
+    @content;
+  }
+}
+
+.wrapper {
+  @include clearfix;
+  max-width: 1040px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.is-hidden { display: none; }

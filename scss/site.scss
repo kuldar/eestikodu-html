@@ -1,0 +1,75 @@
+////////////
+//  Site  //
+////////////
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,900,700,500,300);
+@import 'bourbon';
+
+// Core
+@import 'core/normalize';
+@import 'core/variables';
+@import 'core/helpers';
+@import 'core/base';
+
+// Modules
+@import 'modules/header';
+@import 'modules/contact-form';
+@import 'modules/features';
+@import 'modules/cta';
+@import 'modules/bio';
+@import 'modules/footer';
+
+// Views
+@import 'views/message';
+
+
+///////////
+//  Top  //
+///////////
+
+.top {
+  padding-top: 20px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $light-gray;
+
+  @include min-width(500px) {
+    background-image: url('../images/bg.jpg');
+  }
+
+  @include min-width(1040px) {
+    padding-top: 50px;
+  }
+}
+
+.main-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  max-width: 600px;
+  text-align: center;
+  margin: 40px auto 20px auto;
+
+  em { font-style: normal; }
+
+  @include min-width(650px) {
+    margin: 90px auto 70px auto;
+    font-size: 40.5px;
+    line-height: 40.5px;
+
+    em { border-bottom: 6px solid $blue; }
+  }
+}
+
+.sub-title {
+  font-size: 22.5px;
+  line-height: 27px;
+  letter-spacing: -0.5px;
+  font-style: italic;
+  max-width: 450px;
+  text-align: center;
+  margin: 45px auto 60px auto;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "EestiKodu",
+  "description": "Eesti Kodu Kinnisvara",
+  "version": "0.0.1",
+  "author": "Kuldar Kalvik",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-sass": "^1.1.0",
+    "node-bourbon": "^4.2.3"
+  }
+}

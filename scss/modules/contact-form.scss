@@ -1,0 +1,140 @@
+////////////////////
+//  Contact Form  //
+////////////////////
+
+.contact-form-title {
+  text-align: center;
+  font-size: 22.5px;
+  margin: 40px auto;
+  max-width: 500px;
+  font-weight: bold;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+
+  @include min-width(860px) {
+    max-width: 800px;
+  }
+}
+
+.contact-form-inputs-row {
+  @include clearfix;
+  margin-bottom: 10px;
+}
+
+.contact-form-input-wrapper {
+  width: 100%;
+  float: left;
+  padding-right: 0;
+  padding-bottom: 10px;
+  &.no-padding { padding: 0; }
+
+  @include min-width(860px) {
+    width: 66.6666%;
+    padding-right: 10px;
+    padding-bottom: 0;
+  }
+}
+
+.contact-form-input {
+  outline: none;
+  border: none;
+  font-size: 22.5px;
+  padding: 23px 26px;
+  height: 70px;
+  display: block;
+  width: 100%;
+
+  @include placeholder { color: $gray; }
+}
+
+.contact-form-btn {
+  @include transition(background-color $quick-transition);
+  display: inline-block;
+  float: none;
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  padding: 23px 26px;
+  background-color: $blue;
+  color: $white;
+  font-size: 22.5px;
+  line-height: 22.5px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: darken($blue, 5);
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &:disabled {
+    background-color: $gray;
+  }
+
+  @include min-width(860px) {
+    width: 33.3333%;
+    float: right;
+  }
+}
+
+///////////////////////////
+//  Contact Form Select  //
+///////////////////////////
+
+.contact-form-select-container {
+  width: 100%;
+  float: none;
+
+  @include min-width(860px) {
+    width: 33.3333%;
+    float: left;
+  }
+}
+
+.contact-form-select-wrapper {
+  margin: 0 0 10px 0;
+  display: block;
+  position: relative;
+  padding: 23px 26px;
+  height: 70px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  background-color: $white;
+  background-image: url('../images/down-arrow.svg');
+  background-position: right 25px center;
+  background-repeat: no-repeat;
+
+  &.no-margin { margin: 0; }
+
+  @include min-width(860px) {
+    margin: 0 10px 0 0;
+  }
+}
+
+.contact-form-select-value {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 22.5px;
+  color: $black;
+
+  &.placeholder { color: $gray; }
+}
+
+.contact-form-select {
+  position: absolute;
+  -webkit-appearance: menulist-button;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}

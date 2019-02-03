@@ -1,0 +1,51 @@
+////////////
+//  Base  //
+////////////
+
+// Fix the sizing calculations
+* { box-sizing: border-box; }
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $white;
+  color: $black;
+  font-size: 18px;
+  font-family: $main-font;
+  line-height: 1.4em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Remove all styling from lists
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Remove all styling from headings
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+// Disable number field spinners
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}

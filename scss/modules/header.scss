@@ -1,0 +1,54 @@
+//////////////
+//  Header  //
+//////////////
+
+.header {
+  @include clearfix;
+  background-color: $white;
+  padding: 30px 35px;
+}
+
+.logo {
+  display: block;
+  float: left;
+
+  img {
+    height: 30px;
+    width: 195px;
+    display: block;
+    margin: 0;
+  }
+}
+
+.facebook-link {
+  @include clearfix;
+  padding: 4px 0;
+  display: block;
+  float: right;
+  font-size: 22.5px;
+  line-height: 22.5px;
+  text-align: center;
+
+  img {
+    float: left;
+    display: block;
+    margin-right: 0;
+  }
+
+  span {
+    display: none;
+    float: right;
+  }
+
+  strong { font-weight: 700; }
+  &:hover span { text-decoration: underline; }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  @include min-width(650px) {
+    span { display: block; }
+    img { margin-right: 20px; }
+  }
+}

@@ -1,0 +1,73 @@
+///////////
+//  CTA  //
+///////////
+
+.cta {
+  @include flex(1);
+  padding: 30px;
+  color: $white;
+  background-color: $blue;
+  margin-left: 0;
+  min-width: 47.5%;
+
+  @include min-width(401px) {
+    padding: 40px;
+  }
+
+  @include min-width(860px) {
+    margin-left: 25px;
+  }
+}
+
+.cta-title {
+  @include display(flex);
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 27px;
+  margin-bottom: 30px;
+
+  img {
+    margin-right: 25px;
+    display: none;
+  }
+
+  @include min-width(401px) {
+    img { display: block; }
+  }
+}
+
+.cta-form {}
+
+.cta-email {
+  border: none;
+  background-color: $white;
+  width: 100%;
+  outline: none;
+  height: 60px;
+  font-size: 22.5px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  color: $black;
+}
+
+.cta-submit {
+  width: 100%;
+  display: block;
+  background-color: $black;
+  color: $white;
+  font-size: 22.5px;
+  text-align: center;
+  height: 60px;
+  border: none;
+  font-weight: 700;
+  outline: none;
+
+  &:hover {
+    background-color: darken($black, 5);
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}

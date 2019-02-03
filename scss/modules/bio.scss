@@ -1,0 +1,62 @@
+///////////
+//  Bio  //
+///////////
+
+.bio {
+  @include display(flex);
+  border: 10px solid $light-gray;
+}
+
+.bio-photo {
+  display: none;
+  position: relative;
+  width: 300px;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 235px;
+    height: 325px;
+  }
+
+  @include min-width(700px) {
+    display: block;
+  }
+}
+
+.bio-body {
+  @include flex(1);
+  padding: 30px;
+  font-size: 22.5px;
+  line-height: 27px;
+
+  @include min-width(401px) {
+    padding: 60px;
+  }
+}
+
+.bio-quote {
+  font-size: 27px;
+  line-height: 31.5px;
+  letter-spacing: -0.5px;
+  margin-bottom: 30px;
+
+  p { margin: 0; }
+}
+
+.bio-name {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.bio-email {
+  text-decoration: underline;
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+.bio-phone {}

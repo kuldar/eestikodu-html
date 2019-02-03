@@ -1,0 +1,79 @@
+////////////////
+//  Features  //
+////////////////
+
+.features {
+  padding: 40px 0;
+
+  @include min-width(860px) {
+    padding: 60px 0 40px 0;
+  }
+}
+
+.feature-row {
+  @include display(flex);
+  @include align-items(flex-start);
+  @include flex-direction(column);
+  margin: 0;
+  .feature:first-child { margin-right: 0; }
+  .feature:last-child { margin-left: 0; }
+
+  @include min-width(860px) {
+    @include flex-direction(row);
+    margin: 50px 0;
+    .feature:first-child { margin-right: 25px; }
+    .feature:last-child { margin-left: 25px; }
+  }
+}
+
+///////////////
+//  Feature  //
+///////////////
+
+.feature {
+  @include flex(1);
+  margin: 20px 0;
+  position: relative;
+  padding-left: 0;
+  font-size: 22.5px;
+  line-height: 27px;
+
+  @include min-width(401px) {
+    padding-left: 100px;
+  }
+
+  @include min-width(860px) {
+    margin: 0;
+  }
+}
+
+.feature-icon {
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+  width: 55px;
+  height: 55px;
+  position: relative;
+  background-color: $blue;
+  margin-bottom: 30px;
+
+  img {}
+
+  @include min-width(401px) {
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+.feature-content {}
+
+.feature-title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 27px;
+}
+
+.feature-body {
+  p {}
+}
